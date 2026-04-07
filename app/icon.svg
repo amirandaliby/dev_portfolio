@@ -1,0 +1,37 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="36" y1="28" x2="220" y2="232" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="0.55" stop-color="#0B1222"/>
+      <stop offset="1" stop-color="#070B16"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="52" y1="42" x2="208" y2="214" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F472B6"/>
+      <stop offset="0.48" stop-color="#A855F7"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+    <linearGradient id="monogram" x1="82" y1="84" x2="168" y2="176" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FAFC"/>
+      <stop offset="1" stop-color="#BAE6FD"/>
+    </linearGradient>
+    <filter id="glow" x="18" y="18" width="220" height="220" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+    </filter>
+  </defs>
+
+  <rect width="256" height="256" rx="64" fill="url(#bg)"/>
+
+  <g opacity="0.45" filter="url(#glow)">
+    <circle cx="128" cy="128" r="78" stroke="url(#ring)" stroke-width="12"/>
+  </g>
+
+  <rect x="34" y="34" width="188" height="188" rx="52" stroke="url(#ring)" stroke-width="8"/>
+  <circle cx="128" cy="128" r="74" stroke="url(#ring)" stroke-width="5" opacity="0.8"/>
+
+  <path d="M85 171L118 84H138L171 171H151L143.5 149H112.5L105 171H85ZM117.5 133H138.5L128 101L117.5 133Z" fill="url(#monogram)"/>
+  <path d="M112 138L122 121H170L160 138H112Z" fill="#16F2B3"/>
+
+  <circle cx="72" cy="76" r="4" fill="#FDE68A"/>
+  <circle cx="184" cy="66" r="3" fill="#FFFFFF" opacity="0.9"/>
+  <circle cx="194" cy="178" r="4" fill="#22D3EE" opacity="0.85"/>
+</svg>
