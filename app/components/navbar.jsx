@@ -3,7 +3,7 @@
 
 import { personalData } from "@/utils/data/personal-data";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { HiArrowUpRight, HiMiniBars3, HiMiniXMark } from "react-icons/hi2";
 
 const navItems = [
@@ -12,14 +12,42 @@ const navItems = [
   { label: "Skills", href: "/#skills" },
   { label: "Projects", href: "/#projects" },
   { label: "Education", href: "/#education" },
+  { label: "Awards", href: "/#awards" },
   { label: "Contact", href: "/#contact" },
 ];
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY < 24) {
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY) {
+        setIsVisible(false);
+        setIsOpen(false);
+      } else {
+        setIsVisible(true);
+      }
+
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="sticky top-4 z-[100] pt-4">
+    <nav
+      className={`sticky top-4 z-[100] pt-4 transition-transform duration-300 ${
+        isVisible ? "translate-y-0" : "-translate-y-[140%]"
+      }`}
+    >
       <div className="relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(12,18,36,0.94),rgba(9,15,31,0.9))] shadow-[0_20px_60px_rgba(0,0,0,0.28)] backdrop-blur-xl">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(236,72,153,0.10),transparent_22%),radial-gradient(circle_at_top_right,rgba(34,211,238,0.08),transparent_24%)]"></div>
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-pink-500 to-transparent opacity-80"></div>
@@ -31,7 +59,7 @@ function Navbar() {
                 Amir Andaliby
               </p>
               <p className="truncate text-[11px] uppercase tracking-[0.24em] text-slate-400 md:text-xs">
-                Sr. Software Architect, Senior IEEE Member, Educator
+                Senior Software Architect, Senior IEEE Member, Educator
               </p>
             </div>
           </Link>
@@ -49,14 +77,10 @@ function Navbar() {
               ))}
             </div>
 
-            <Link
-              href={personalData.resume}
-              target="_blank"
-              className="ml-2 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-5 py-3 text-sm font-medium uppercase tracking-[0.22em] text-white transition-all duration-300 hover:translate-y-[-1px] hover:shadow-[0_14px_32px_rgba(236,72,153,0.22)]"
-            >
+            <span className="ml-2 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-5 py-3 text-sm font-medium uppercase tracking-[0.22em] text-white transition-all duration-300 hover:translate-y-[-1px] hover:shadow-[0_14px_32px_rgba(236,72,153,0.22)]">
               <span>Resume</span>
               <HiArrowUpRight size={16} />
-            </Link>
+            </span>
           </div>
 
           <button
@@ -84,15 +108,13 @@ function Navbar() {
                 </Link>
               ))}
 
-              <Link
-                href={personalData.resume}
-                target="_blank"
+              <span
                 onClick={() => setIsOpen(false)}
                 className="mt-2 inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-pink-500 to-violet-600 px-5 py-3 text-sm font-medium uppercase tracking-[0.22em] text-white"
               >
                 <span>Resume</span>
                 <HiArrowUpRight size={16} />
-              </Link>
+              </span>
             </div>
           </div>
         )}

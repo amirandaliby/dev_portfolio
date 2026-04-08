@@ -28,7 +28,7 @@ function Experience() {
           <p className="text-sm uppercase tracking-[0.3em] text-violet-200/70">
             Experience Across <span className="text-yellow-300">Industry</span>, <span className="text-[#16f2b3]">Academia</span>, and <span className="text-sky-300">IEEE</span>
           </p>
-          <h2 className="mt-3 text-4xl font-semibold leading-tight text-white md:text-5xl lg:text-6xl">
+          <h2 className="mt-3 text-3xl font-bold leading-10 text-white md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem]">
             Engineering, education, and leadership in practice.
           </h2>
         </div>

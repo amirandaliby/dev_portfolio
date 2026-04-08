@@ -13,6 +13,7 @@ function Footer() {
     { label: "Skills", href: "#skills" },
     { label: "Projects", href: "#projects" },
     { label: "Education", href: "#education" },
+    { label: "Awards", href: "#awards" },
     { label: "Contact", href: "#contact" },
   ];
 

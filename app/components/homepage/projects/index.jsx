@@ -22,9 +22,9 @@ const Projects = () => {
             <span className="text-sky-300">platforms</span>, and{" "}
             <span className="text-[#16f2b3]">solutions</span>
           </p>
-          <h2 className="mt-4 text-4xl font-semibold leading-tight text-white md:text-5xl lg:text-6xl">
-            Selected work across
-            <span className="block bg-gradient-to-r from-violet-300 via-white to-pink-300 bg-clip-text text-transparent">
+          <h2 className="mt-4 text-3xl font-bold leading-10 text-white md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem]">
+            Selected work across{" "}
+            <span className="bg-gradient-to-r from-violet-300 via-white to-pink-300 bg-clip-text text-transparent">
               software delivery,
             </span>
             <span className="block">automation, and applied engineering.</span>

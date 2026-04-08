@@ -30,7 +30,7 @@ function Skills() {
             <span className="text-sky-300">technologies</span>, and{" "}
             <span className="text-[#16f2b3]">workflows</span>
           </p>
-          <h2 className="mt-4 text-4xl font-semibold leading-tight text-white md:text-5xl lg:text-6xl">
+          <h2 className="mt-4 text-3xl font-bold leading-10 text-white md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem]">
             My toolkit for{" "}
             <span className="bg-gradient-to-r from-violet-300 via-white to-pink-300 bg-clip-text text-transparent">
               building, shipping, and scaling.

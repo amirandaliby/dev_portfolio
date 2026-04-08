@@ -6,8 +6,8 @@ import nodemailer from 'nodemailer';
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: process.env.EMAIL_ADDRESS,     // e.g., hetvishukla1001@gmail.com
-    pass: process.env.GMAIL_PASSKEY,     // 16-char app password (no spaces)
+    user: process.env.EMAIL_ADDRESS,
+    pass: process.env.GMAIL_PASSKEY,
   },
 });
 
@@ -29,8 +29,6 @@ const generateEmailTemplate = (name, email, userMessage) => `
 
 // POST route handler
 export async function POST(request) {
-  console.log('EMAIL_ADDRESS:', process.env.EMAIL_ADDRESS);
-  console.log('GMAIL_PASSKEY set?:', !!process.env.GMAIL_PASSKEY);
   try {
     const payload = await request.json();
     const { name, email, message: userMessage } = payload;

@@ -21,7 +21,7 @@ function AboutSection() {
           </div>
         </div>
 
-        <div className="relative grid grid-cols-1 gap-10 pt-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch lg:gap-12">
+        <div className="relative grid grid-cols-1 gap-10 pt-14 lg:grid-cols-[1fr_1.35fr] lg:items-stretch lg:gap-12">
           <div className="flex h-full flex-col">
             <div className="max-w-3xl">
               <p className="text-sm uppercase tracking-[0.32em] text-violet-200/80">
@@ -31,7 +31,7 @@ function AboutSection() {
                 <span> • </span>
                 <span className="text-yellow-300">volunteer</span>
               </p>
-              <h2 className="mt-4 text-4xl font-semibold leading-tight text-white md:text-5xl lg:text-6xl">
+              <h2 className="mt-4 text-3xl font-bold leading-10 text-white md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem]">
                 Building systems,
                 <span className="block bg-gradient-to-r from-violet-300 via-white to-pink-300 bg-clip-text text-transparent">
                   mentoring people,
@@ -51,10 +51,13 @@ function AboutSection() {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(168,85,247,0.12),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(34,211,238,0.10),transparent_24%)] opacity-80"></div>
                 <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-pink-500 to-transparent opacity-80"></div>
 
-                <div className="relative space-y-4 text-sm leading-7 text-slate-300 md:text-base">
+                <div className="relative">
+                  <p className="mb-4 text-sm uppercase tracking-[0.32em] text-pink-200">Professional narrative</p>
+                  <div className="space-y-4 text-sm leading-7 text-slate-300 md:text-base">
                   {paragraphs.map((paragraph) => (
                     <p key={paragraph}>{paragraph}</p>
                   ))}
+                  </div>
                 </div>
               </div>
             </div>

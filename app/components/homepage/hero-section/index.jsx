@@ -63,34 +63,18 @@ function HeroSection() {
             >
               <RiContactsFill size={30} />
             </Link>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <Link
-              className="flex items-center gap-1 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-3 py-3 text-center text-xs font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out hover:gap-3 hover:text-white hover:no-underline md:px-8 md:py-4 md:text-sm md:font-semibold"
-              role="button"
-              target="_blank"
-              href={personalData.resume}
-            >
+            <span className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-4 py-2 text-xs font-medium uppercase tracking-[0.22em] text-white transition-all duration-300 hover:gap-3">
               <span>Get Resume</span>
               <MdDownload size={16} />
-            </Link>
+            </span>
           </div>
         </div>
 
-        <div className="relative order-1 rounded-[1.85rem] border border-[#1b2c68a0] bg-gradient-to-r from-[#0d1224] to-[#0a0d37] lg:order-2">
-          <div className="flex flex-row">
-            <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>
-            <div className="h-[1px] w-full bg-gradient-to-r from-violet-600 to-transparent"></div>
-          </div>
-          <div className="px-4 py-5 lg:px-8">
-            <div className="flex flex-row space-x-2">
-              <div className="h-3 w-3 rounded-full bg-red-400"></div>
-              <div className="h-3 w-3 rounded-full bg-orange-400"></div>
-              <div className="h-3 w-3 rounded-full bg-green-200"></div>
-            </div>
-          </div>
-          <div className="overflow-hidden border-t-[2px] border-indigo-900 px-4 py-4 lg:px-8 lg:py-8">
+        <div className="relative order-1 overflow-hidden rounded-[1.8rem] border border-[#1b2c68a0] bg-[linear-gradient(180deg,rgba(13,18,36,0.96),rgba(10,13,55,0.92))] shadow-[0_16px_48px_rgba(0,0,0,0.24)] lg:order-2">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(168,85,247,0.12),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(34,211,238,0.10),transparent_24%)] opacity-80"></div>
+          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-pink-500 to-transparent opacity-80"></div>
+
+          <div className="relative overflow-hidden px-4 py-4 lg:px-8 lg:py-5">
             <code className="font-mono text-xs md:text-sm lg:text-base">
               <div className="blink">
                 <span className="mr-2 text-pink-500">const</span>

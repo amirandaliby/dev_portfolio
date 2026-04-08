@@ -58,13 +58,6 @@ function ContactForm() {
 
       <div className="relative">
         <p className="mb-3 text-sm uppercase tracking-[0.32em] text-pink-200">Start a conversation</p>
-        <h3 className="text-2xl font-semibold leading-tight text-white md:text-3xl">
-          Let&apos;s build something thoughtful and technically meaningful.
-        </h3>
-        <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-300 md:text-base">
-          If you have a question, opportunity, collaboration idea, or community initiative in mind, feel free to reach out. I&apos;m always open to conversations around technology, education, and impact.
-        </p>
-
         <div className="mt-6 flex flex-col gap-4">
           <div className="flex flex-col gap-2">
             <label className="text-base text-slate-200">Your Name</label>
@@ -109,7 +102,7 @@ function ContactForm() {
               value={userInput.message}
             />
           </div>
-          <div className="flex flex-col items-center gap-3">
+          <div className="flex flex-col items-start gap-3">
             {error.required && <p className="text-sm text-red-400">
               All fiels are required!
             </p>}
