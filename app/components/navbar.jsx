@@ -59,7 +59,7 @@ function Navbar() {
                 Amir Andaliby
               </p>
               <p className="truncate text-[11px] uppercase tracking-[0.24em] text-slate-400 md:text-xs">
-                Senior Software Architect, Senior IEEE Member, Educator
+                Senior Software Architect, IEEE Senior Member, Educator
               </p>
             </div>
           </Link>

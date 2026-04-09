@@ -47,7 +47,7 @@ function Education() {
             {educations.map((education, index) => (
               <article
                 key={education.id}
-                className="experience-card relative md:grid md:grid-cols-2 md:gap-10"
+                className="education-card relative md:grid md:grid-cols-2 md:gap-10"
                 style={{ "--card-index": index + 1 }}
               >
                 <div className="absolute left-1/2 top-8 hidden h-12 w-12 -translate-x-1/2 items-center justify-center rounded-full border border-pink-400/25 bg-[#0d1224] shadow-[0_0_30px_rgba(236,72,153,0.18)] md:flex">
@@ -69,7 +69,7 @@ function Education() {
                     }`}
                   ></div>
 
-                  <div className="experience-card-panel relative overflow-hidden rounded-[1.75rem] border border-[#1b2c68a0] bg-gradient-to-r from-[#0d1224] to-[#0a0d37] shadow-[0_0_30px_0_rgba(0,0,0,0.28)]">
+                  <div className="education-card-panel relative overflow-hidden rounded-[1.75rem] border border-[#1b2c68a0] bg-gradient-to-r from-[#0d1224] to-[#0a0d37] shadow-[0_0_30px_0_rgba(0,0,0,0.28)]">
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(168,85,247,0.10),transparent_24%),radial-gradient(circle_at_bottom_left,rgba(236,72,153,0.10),transparent_24%)]"></div>
                     <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-pink-500 to-transparent opacity-80"></div>
 

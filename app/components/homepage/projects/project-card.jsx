@@ -5,22 +5,11 @@ import * as React from 'react';
 function ProjectCard({ project }) {
 
   return (
-    <div className="from-[#0d1224] border-[#1b2c68a0] relative rounded-lg border bg-gradient-to-r to-[#0a0d37] w-full">
-      <div className="flex flex-row">
-        <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>
-        <div className="h-[1px] w-full bg-gradient-to-r from-violet-600 to-transparent"></div>
-      </div>
-      <div className="px-4 lg:px-8 py-3 lg:py-5 relative">
-        <div className="flex flex-row space-x-1 lg:space-x-2 absolute top-1/2 -translate-y-1/2">
-          <div className="h-2 w-2 lg:h-3 lg:w-3 rounded-full bg-red-400"></div>
-          <div className="h-2 w-2 lg:h-3 lg:w-3 rounded-full bg-orange-400"></div>
-          <div className="h-2 w-2 lg:h-3 lg:w-3 rounded-full bg-green-200"></div>
-        </div>
-        <p className="text-center ml-3 text-[#16f2b3] text-base lg:text-xl">
-          {project.name}
-        </p>
-      </div>
-      <div className="overflow-hidden border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
+    <div className="relative w-full overflow-hidden rounded-[1.8rem] border border-[#1b2c68a0] bg-[linear-gradient(180deg,rgba(13,18,36,0.96),rgba(10,13,55,0.92))] shadow-[0_16px_48px_rgba(0,0,0,0.24)]">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(168,85,247,0.12),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(34,211,238,0.10),transparent_24%)] opacity-80"></div>
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-pink-500 to-transparent opacity-80"></div>
+
+      <div className="relative overflow-hidden px-4 py-4 lg:px-8 lg:py-5">
         <code className="font-mono text-xs md:text-sm lg:text-base">
           <div className="blink">
             <span className="mr-2 text-pink-500">const</span>
@@ -32,6 +21,18 @@ function ProjectCard({ project }) {
             <span className="ml-4 lg:ml-8 mr-2 text-white">name:</span>
             <span className="text-gray-400">{`'`}</span>
             <span className="text-amber-300">{project.name}</span>
+            <span className="text-gray-400">{`',`}</span>
+          </div>
+          <div>
+            <span className="ml-4 lg:ml-8 mr-2 text-white">company:</span>
+            <span className="text-gray-400">{`'`}</span>
+            <span className="text-sky-300">{project.company}</span>
+            <span className="text-gray-400">{`',`}</span>
+          </div>
+          <div>
+            <span className="ml-4 lg:ml-8 mr-2 text-white">duration:</span>
+            <span className="text-gray-400">{`'`}</span>
+            <span className="text-pink-200">{project.duration}</span>
             <span className="text-gray-400">{`',`}</span>
           </div>
 
