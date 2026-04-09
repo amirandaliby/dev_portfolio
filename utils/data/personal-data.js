@@ -10,5 +10,5 @@ export const personalData = {
   github: "https://github.com/amirandaliby",
   linkedIn: "https://www.linkedin.com/in/amirandaliby/",
   leetcode: "",
-  resume: "https://drive.google.com/file/d/17pqgDvXtzmqLNO4Lx-cvD3hui5Oy98aJ/view?usp=sharing",
+  resume: "/Amir-Andaliby-Resume.pdf.pdf",
 };

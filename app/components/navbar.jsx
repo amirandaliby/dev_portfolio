@@ -76,11 +76,6 @@ function Navbar() {
                 </Link>
               ))}
             </div>
-
-            <span className="ml-2 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-5 py-3 text-sm font-medium uppercase tracking-[0.22em] text-white transition-all duration-300 hover:translate-y-[-1px] hover:shadow-[0_14px_32px_rgba(236,72,153,0.22)]">
-              <span>Resume</span>
-              <HiArrowUpRight size={16} />
-            </span>
           </div>
 
           <button
@@ -107,14 +102,6 @@ function Navbar() {
                   {item.label}
                 </Link>
               ))}
-
-              <span
-                onClick={() => setIsOpen(false)}
-                className="mt-2 inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-pink-500 to-violet-600 px-5 py-3 text-sm font-medium uppercase tracking-[0.22em] text-white"
-              >
-                <span>Resume</span>
-                <HiArrowUpRight size={16} />
-              </span>
             </div>
           </div>
         )}

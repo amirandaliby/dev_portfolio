@@ -63,10 +63,14 @@ function HeroSection() {
             >
               <RiContactsFill size={30} />
             </Link>
-            <span className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-4 py-2 text-xs font-medium uppercase tracking-[0.22em] text-white transition-all duration-300 hover:gap-3">
-              <span>Get Resume</span>
+            <Link
+              href={personalData.resume}
+              target="_blank"
+              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-4 py-2 text-xs font-medium uppercase tracking-[0.22em] text-white transition-all duration-300 hover:gap-3"
+            >
+              <span>Resume</span>
               <MdDownload size={16} />
-            </span>
+            </Link>
           </div>
         </div>
 
